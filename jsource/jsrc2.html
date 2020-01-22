@@ -1,0 +1,40 @@
+  <div id="bbox"></div>
+</div>
+    <script type="text/javascript">
+        var x,y,oldx,oldy;
+var showDrag = false;
+document.getElementById("cont").addEventListener("mousedown", function(e) {
+  oldx = e.clientX; //mousedown x coord
+  oldy = e.clientY; //mouedown y coord
+  showDrag = true;
+  e.preventDefault();
+});
+document.getElementById("cont").addEventListener("mousemove", function(e) {
+  if (showDrag == true) {
+    x = e.clientX; //mouseup x coord
+    y = e.clientY; //mouseup y coord
+    var bbox = document.getElementById("bbox");
+    var contbox = document.getElementById("cont");
+    //get the width and height of the dragged area
+    var w = (x > oldx ? x-oldx : oldx-x);
+    var h = (y > oldy ? y-oldy : oldy-y);
+    var addx = 0, addy = 0;
+    //these next two lines judge if the box was dragged backward
+    //and adds the box's width to the bbox positioning offset
+    if (x < oldx) { addx = w; }
+    if (y < oldy) { addy = h; }
+    bbox.style.left = (oldx-parseInt((contbox.offsetLeft+addx)))+"px";
+    bbox.style.top = (oldy-parseInt((contbox.offsetTop+addy)))+"px";
+    bbox.style.width = w+"px";
+    bbox.style.height = h+"px";
+    bbox.style.display = "block";
+  }
+  e.preventDefault();
+});
+document.getElementById("cont").addEventListener("mouseup", function(e) {
+  showDrag = false;
+  e.preventDefault();
+});
+    </script>
+</body>
+</html>
