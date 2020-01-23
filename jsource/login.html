@@ -1,206 +1,166 @@
 <!DOCTYPE html>
-<html>
+<html  lang="he">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-/* Full-width input fields */
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+		<link href="profile.css" rel="stylesheet" type="text/css">
 
-/* Set a style for all buttons */
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
+		<style>
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+			background-image: url(http://www.joburgchiropractor.co.za/images/background.jpg);
 
-button:hover {
-  opacity: 0.8;
-}
-
-/* Extra styles for the cancel button */
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
-
-/* Center the image and position the close button */
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-  position: relative;
-}
-
-img.avatar {
-  width: 40%;
-  border-radius: 50%;
-}
-
-.container {
-  padding: 16px;
-}
-
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  padding-top: 60px;
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button (x) */
-.close {
-  position: absolute;
-  right: 25px;
-  top: 0;
-  color: #000;
-  font-size: 35px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: red;
-  cursor: pointer;
-}
-
-/* Add Zoom Animation */
-.animate {
-  -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)} 
-  to {-webkit-transform: scale(1)}
-}
-  
-@keyframes animatezoom {
-  from {transform: scale(0)} 
-  to {transform: scale(1)}
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
-  .cancelbtn {
-     width: 100%;
-  }
-}
-</style>
-</head>
-<body>
-
-<h2>Login or Sign Up</h2>
-
-<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
-<br>
+		}
+		
+		
+		option { text-align-right; direction: rtl; }
+		input[type='text'] { text-align: right; margin: 0; padding: 0 5px 0 0; color: black; }
+		.form-control.input-sm { margin: 0 ; padding: 0 5px 0 0; text-align: right; }
+		.input-group.has-feedback { margin-bottom: 5px; text-align: right; }		
 
 
-<div id="id01" class="modal">
-  
-  <form class="modal-content animate" action="/cgi-bin/cgi-test.exe" method="get">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="img_avatar2.png" alt="Avatar" class="avatar">
-    </div>
+		body{
+		}
 
-    <div class="container">
-      <label for="username"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="username" required>
+		.container { margin-top: 30px; }
 
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="password" required>
-        
-      <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
+		.fa, .glyphicon { text-shadow: 100px 100px 100px #ccc; }
 
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
-</div>
+		.input-group-addon { 
+			background-color: #ffde6c; 
+			color: #d17d00; 
+		}
 
-<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
-<div id="id01" class="modal">
-  
-  <form class="modal-content animate" action="/cgi-bin/cgi-test.exe" method="get">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="img_avatar2.png" alt="Avatar" class="avatar">
-    </div>
+		.form-control { 
+			margin-bottom: 10px; 
+		}
 
-    <div class="container">
-      <label for="username"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="username" required>
+		 .panel-body .input-group { 
+			margin: 4px 0 5px 0; 
+		}
 
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="password" required>
-        
-      <button type="submit">Signup</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
+		.panel, .well, .well-sm, .card { 
+			box-shadow: 0 0 10px #666666; 
+		}
 
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
-</div>
+		.panel > .panel-heading1 {
+			background: #ff0000; 
+			color: #fff; 
+		}
+
+		</style>
+	</head>
+	<body>
+		<script src="https://use.fontawesome.com/7f1d70ce9d.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		</script>
+
+		<div class="container">
+			<h2>Login or Sign Up</h2>
+		
+			<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#id01" style="width:auto;">Login</button>
+			<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#id02" style="width:auto;">Signup</button>
+			
+			<!-- Modal -->
+			<div id="id01" class="modal fade" role="dialog" tabindex="-1">
+			  <div class="modal-dialog modal-md">
+
+				<!-- Modal content-->
+				<div class="modal-content  panel panel-danger">
+				  <div class="modal-header panel-heading">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h3 class="panel-title text-center"><strong>להיכנס לפרופיל שלך</strong></h3>
+				  </div>
+				  <div class="modal-body">
+						<form class="form-horizontal" role="form" action="/cgi-bin/cgi-test.exe" method="get">
+							<label class="control-label" for="username">שם משתמש או אימייל</label>
+							<div class="input-group has-feedback" id="usernameDiv">
+							    <span class="sr-only" aria-hidden="true" id="usernameSign"></span>
+								<input id="username" type="text" class="form-control input-sm" placeholder="הכנס שם משתמש או אימייל" name="username" title="שם משתמש או אימייל" required>
+								<span class="input-group-addon" title="שם משתמש או אימייל"><i class="glyphicon glyphicon-user"></i></span>
+							</div>
+
+							<label class="control-label" for="password">ססמת כניסה</label>
+							<div class="input-group has-feedback" id="passwordDiv">
+							    <span class="sr-only" aria-hidden="true" id="passwordSign"></span>
+								<input id="password" type="password" class="form-control input-sm" placeholder="הכנס/הכניסי ססמת כניסה" name="password" title="ססמת כניסה" required>
+								<span class="input-group-addon" title="password"><i class="glyphicon glyphicon-lock"></i></span>
+							</div>
+							
+							<button type="submit" class="btn btn-primary btn-block" style="margin-bottom:-2px; margin-top:10px;">להיכנס לחשבון שלך</button>
+							<div class = "input-group btn-block">
+								<div class="pull-right checkbox-inline" style="margin-right: -7px;">
+								זכור אותי&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="remember" type="checkbox" ng-model="remember" >
+								</div>
+								<div class ="pull-left checkbox-inline" style="margin-left: -20px;"><a href="javascript:void(0);">?שכחת את הססמה</a></div>
+							</div>
+						</form>
+				  </div>
+				  <div class="modal-footer">
+					<div style="margin: 7px 0 0 0;">
+						<label class="control-label">
+							אין לך חשבון? 
+							<a href="signup">להירשם כאן בחינם</a>
+						</label>
+					</div> 
+				  </div>			
+				</div>
+
+			  </div>
+			</div>
+
+			<!-- Modal -->
+			<div id="id02" class="modal fade" role="dialog" tabindex="-1">
+			  <div class="modal-dialog modal-md">
+
+				<!-- Modal content-->
+				<div class="modal-content  panel panel-danger">
+				  <div class="modal-header panel-heading">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h3 class="panel-title text-center"><strong>להירשם לפרופיל</strong></h3>
+				  </div>
+				  <div class="modal-body">
+						<form class="form-horizontal" role="form" action="/cgi-bin/cgi-test.exe" method="post">
+							<label class="control-label" for="username">שם משתמש או אימייל</label>
+							<div class="input-group has-feedback" id="usernameDiv">
+							    <span class="sr-only" aria-hidden="true" id="usernameSign"></span>
+								<input id="username" type="text" class="form-control input-sm" placeholder="הכנס שם משתמש או אימייל" name="username" title="שם משתמש או אימייל" required>
+								<span class="input-group-addon" title="שם משתמש או אימייל"><i class="glyphicon glyphicon-user"></i></span>
+							</div>
+
+							<label class="control-label" for="password">ססמת כניסה</label>
+							<div class="input-group has-feedback" id="passwordDiv">
+							    <span class="sr-only" aria-hidden="true" id="passwordSign"></span>
+								<input id="password" type="password" class="form-control input-sm" placeholder="הכנס/הכניסי ססמת כניסה" name="password" title="ססמת כניסה" required>
+								<span class="input-group-addon" title="password"><i class="glyphicon glyphicon-lock"></i></span>
+							</div>
+							
+							<button type="submit" class="btn btn-primary btn-block" style="margin-bottom:-2px; margin-top:10px;">לרשום חשבון חדש</button>
+						</form>
+				  </div>			
+				</div>
+
+			  </div>
+			</div>
+
+			
+		</div>
+
+
 
 
 <script>
-// Get the modal
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+			("#id01 .close").click(function () {
+				$("#id01").modal("hide");
+			});
+			
+			("#id02 .close").click(function () {
+				$("#id02").modal("hide");
+			});
 </script>
 
 </body>
